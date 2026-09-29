@@ -1,0 +1,86 @@
+{
+  "selected_model": "Decision tree",
+  "train_samples": 72,
+  "test_samples": 18,
+  "models": {
+    "Logistic regression": {
+      "cross_validation_accuracy": 0.8464285714285713,
+      "test_accuracy": 0.8333333333333334,
+      "confusion_matrix": [
+        [
+          3,
+          3
+        ],
+        [
+          0,
+          12
+        ]
+      ],
+      "best_parameters": {
+        "model__C": 0.01,
+        "model__penalty": "l2",
+        "model__solver": "lbfgs"
+      }
+    },
+    "SVM": {
+      "cross_validation_accuracy": 0.8214285714285714,
+      "test_accuracy": 0.8333333333333334,
+      "confusion_matrix": [
+        [
+          3,
+          3
+        ],
+        [
+          0,
+          12
+        ]
+      ],
+      "best_parameters": {
+        "model__C": 0.03162277660168379,
+        "model__gamma": 0.001,
+        "model__kernel": "linear"
+      }
+    },
+    "Decision tree": {
+      "cross_validation_accuracy": 0.8767857142857143,
+      "test_accuracy": 0.8333333333333334,
+      "confusion_matrix": [
+        [
+          3,
+          3
+        ],
+        [
+          0,
+          12
+        ]
+      ],
+      "best_parameters": {
+        "model__criterion": "gini",
+        "model__max_depth": 8,
+        "model__max_features": "sqrt",
+        "model__min_samples_leaf": 2,
+        "model__min_samples_split": 10,
+        "model__splitter": "best"
+      }
+    },
+    "KNN": {
+      "cross_validation_accuracy": 0.8482142857142858,
+      "test_accuracy": 0.8333333333333334,
+      "confusion_matrix": [
+        [
+          3,
+          3
+        ],
+        [
+          0,
+          12
+        ]
+      ],
+      "best_parameters": {
+        "model__algorithm": "auto",
+        "model__n_neighbors": 10,
+        "model__p": 1
+      }
+    }
+  }
+}

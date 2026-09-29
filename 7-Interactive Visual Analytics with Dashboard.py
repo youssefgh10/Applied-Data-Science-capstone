@@ -1,10 +1,16 @@
+from pathlib import Path
+
 import pandas as pd
 import dash
 from dash import html, dcc
 from dash.dependencies import Input, Output
 import plotly.express as px
 
-spacex_df = pd.read_csv("C:/Users/pc/Desktop/DATA/Course 10/1,2,3,4,5/spacex_launch_dash.csv")
+# Resolve the bundled IBM course snapshot relative to this script.
+DATA_PATH = Path(__file__).resolve().parent / "data" / "spacex_launch_dash.csv"
+if not DATA_PATH.is_file():
+    raise FileNotFoundError(f"Missing dashboard data: {DATA_PATH}. Keep the data folder beside this script.")
+spacex_df = pd.read_csv(DATA_PATH)
 max_payload = spacex_df['Payload Mass (kg)'].max()
 min_payload = spacex_df['Payload Mass (kg)'].min()
 
@@ -25,7 +31,8 @@ app.layout = html.Div(children=[
         ],
         value='ALL',
         placeholder='Select a Launch Site here',
-        searchable=True
+        searchable=True,
+        clearable=False
     ),
 
     html.Br(),

@@ -1,0 +1,16 @@
+numpy==2.3.5
+pandas==2.2.3
+scipy==1.17.0
+scikit-learn==1.8.0
+matplotlib==3.10.8
+seaborn==0.13.2
+dash==4.4.1
+plotly==7.1.0
+notebook>=7.0
+ipykernel>=6.29
+requests>=2.31
+beautifulsoup4>=4.12
+folium>=0.15
+wget>=3.2
+ipython-sql>=0.5
+SQLAlchemy>=2.0
